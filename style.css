@@ -89,15 +89,28 @@ body {
     font-size: 1.2em;
 }
 
- .translate-button {
+        /* Translateボタンのスタイル */
+        .translate-button {
             padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
+            background-color: #4CAF50; /* グリーンの背景色 */
+            color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s ease; /* ホバー時のトランジション */
+            font-family: 'Arial', sans-serif; /* フォントファミリー */
+            font-size: 16px; /* フォントサイズ */
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* 影の設定 */
         }
 
         /* ホバー時のスタイル */
         .translate-button:hover {
-            background-color: #0056b3;
+            background-color: #45a049; /* グリーンの濃いめの背景色 */
+        }
+
+        /* アクティブ時のスタイル */
+        .translate-button:active {
+            background-color: #367128; /* グリーンの暗い背景色 */
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* より薄い影 */
+            transform: translateY(1px); /* ボタンを少し下に移動 */
+        }
