@@ -8,16 +8,18 @@ let timerInterval; // タイマーのインターバルID
 let elapsedTime = 0; // 経過時間
 
 document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('start-button').addEventListener('click', startGame);
-            // Add event listener to translate button
-            document.getElementById('translate-button').addEventListener('click', searchTranslation);
-        });
+// すべての要素に対してクリックイベントを追加
+　document.querySelectorAll('*').forEach(element => {
+    element.addEventListener('click', startGameAnywhere);
+});
+});
 
 
 function startGame() {
     document.getElementById('start-button').style.display = 'none';
     document.getElementById('word-container').style.display = 'block';
     loadWords();
+　　startGameAnywhere();
     currentWordIndex = 0;
     gameStartTime = Date.now(); // ゲームが開始された時点のタイムスタンプを取得
 }
@@ -354,3 +356,12 @@ function resetTimer() {
     elapsedTime = 0; // 経過時間をリセット
     displayElapsedTime(); // 経過時間を表示
 }
+
+        function startGameAnywhere() {
+            // ゲームを開始する処理をここに記述
+            
+            // クリックイベントのリスナーをすべて削除する
+            document.querySelectorAll('*').forEach(element => {
+                element.removeEventListener('click', startGameAnywhere);
+            });
+        }
