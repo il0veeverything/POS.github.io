@@ -89,8 +89,7 @@ body {
     font-size: 1.2em;
 }
 
-        /* Translateボタンのスタイル */
-        .translate-button {
+.translate-button {
             padding: 10px 20px;
             background-color: #4CAF50; /* グリーンの背景色 */
             color: white;
@@ -113,4 +112,3 @@ body {
             background-color: #367128; /* グリーンの暗い背景色 */
             box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* より薄い影 */
             transform: translateY(1px); /* ボタンを少し下に移動 */
-        }
