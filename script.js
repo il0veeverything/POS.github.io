@@ -8,8 +8,10 @@ let timerInterval; // タイマーのインターバルID
 let elapsedTime = 0; // 経過時間
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('start-button').addEventListener('click', startGame);
-});
+            document.getElementById('start-button').addEventListener('click', startGame);
+            // Add event listener to translate button
+            document.getElementById('translate-button').addEventListener('click', searchTranslation);
+        });
 
 
 function startGame() {
@@ -91,6 +93,12 @@ function displayNextWord() {
     currentWordIndex++; // 問題が表示された後にインデックスを増やす
 }
 
+function searchTranslation() {
+    const wordToTranslate = document.getElementById('word-display').textContent;
+    const searchQuery = encodeURIComponent(wordToTranslate + ' translate');
+    const searchURL = `https://www.google.com/search?q=${searchQuery}+translate`;
+    window.open(searchURL, '_blank');
+}
 
 
 
