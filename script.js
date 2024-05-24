@@ -93,7 +93,7 @@ function displayNextWord() {
 
 function searchTranslation() {
             const wordToTranslate = document.getElementById('word-display').textContent;
-            const searchQuery = encodeURIComponent(wordToTranslate);
+            const searchQuery = encodeURIComponent(wordToTranslate+' translate');
             const searchURL = `https://www.google.com/search?q=${searchQuery}`;
             window.open(searchURL, '_blank');
         }
