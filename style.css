@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0f5;
+    position: relative;
+}
+
+.game-container {
+    text-align: center;
+}
+
+.big-word {
+    font-size: 2.5em;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%; /* 親要素の幅いっぱいに広がる */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.option {
+    width: 100%; /* 選択肢の幅を親要素に合わせる */
+    padding: 15px 0; /* 選択肢の上下の余白 */
+    font-size: 1.5em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center; /* 選択肢のテキストを中央揃えにする */
+}
+
+
+.option:hover {
+    opacity: 0.8;
+}
+
+/* 各品詞ごとの背景色 */
+.options .option.noun { background-color: #007bff; }
+.options .option.verb { background-color: #28a745; }
+.options .option.adjective { background-color: #ffc107; }
+.options .option.adverb { background-color: #17a2b8; }
+.options .option.pronoun { background-color: #dc3545; }
+.options .option.auxiliary-verb { background-color: #6610f2; }
+.options .option.preposition { background-color: #20c997; }
+.options .option.article { background-color: #fd7e14; }
+.options .option.interjection { background-color: #6c757d; }
+.options .option.conjunction { background-color: #343a40; }
+
+/* 正解時と不正解時の背景色 */
+.options .option.correct-answer { background-color: #5cb85c; }
+.options .option.wrong-answer { background-color: #d9534f; }
+
+
+.big-button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.big-button:hover {
+    background-color: #0056b3;
+}
+
+#word-container,
+#start-button {
+    display: none;
+}
+
+.accuracy {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
