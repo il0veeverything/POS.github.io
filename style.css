@@ -89,8 +89,9 @@ body {
     font-size: 1.2em;
 }
 
-.translate-button {
-            padding: 10px 20px;
+        /* Translateボタンのスタイル */
+        .translate-button {
+            padding: 15px 30px; /* 上下左右の余白を増やす */
             background-color: #4CAF50; /* グリーンの背景色 */
             color: white;
             border: none;
